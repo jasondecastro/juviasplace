@@ -5,8 +5,8 @@ from urllib2 import urlopen
 from bs4 import BeautifulSoup
 from twilio.rest import TwilioRestClient
 
-account_sid = "AC499b0b2477461f0b417fd79f0cc0a9b3" 
-auth_token  = "1a1f186e149af311706de4701b0e96a3"  
+account_sid = "" 
+auth_token  = ""  
 
 client = TwilioRestClient(account_sid, auth_token)
 
@@ -24,8 +24,8 @@ def checkStatus():
 		print "out of stock"
 	else:
 		message = client.messages.create(body="The Juvia's July Beauty Box is currently in stock. Get it now while it lasts.",
-	    to="+19293535524",    
-	    from_="+16463623998")
+	    to="+1",    
+	    from_="+1")
 
 	return 'Nothing to see here.'
 
